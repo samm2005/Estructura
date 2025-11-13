@@ -1,0 +1,30 @@
+import pandas as pd
+
+df = pd.read_excel("ferreteria_registros.xlsx")
+
+
+rango_indices= df.iloc[3:5]
+print(rango_indices, "\n")
+filas_seleccionadas = df.iloc[3:5]
+print(filas_seleccionadas, "\n")
+
+
+std_total = df['Total'].std()
+print(f"la desviación estandar de la columna Total es:  {std_total}", "\n")
+
+varianza_total = df['Total'].var()
+print(f"la varianza de la columna Total es:  {varianza_total}", "\n")
+
+conteo_cant = df.count()
+print(conteo_cant, "\n")
+
+conteo_canti = df['Cantidad'].count()
+print(f"Numero de elementos en 'Cantidad : {conteo_canti}", "\n")
+
+suma_total = df['Total'].sum()
+print(f"Suma total de los valores en 'Total: {suma_total}", "\n")
+
+total_elementos = df.size
+print(f"el numero total de elementos en el df es de: {total_elementos}", "\n")
+elementos_total = df['Total'].size
+print(f"el numero total de elementos en la columna 'Total es de: {elementos_total}", "\n")
